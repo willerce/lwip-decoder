@@ -1,6 +1,6 @@
 {
   "name": "lwip-decoder",
-  "version": "0.0.6",
+  "version": "0.0.1",
   "main": "index.js",
   "dependencies": {
     "async": "~0.9.0",
@@ -12,9 +12,9 @@
   "binary": {
     "module_name" : "lwip_decoder",
     "module_path" : "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
-    "remote_path" : "./{module_name}/v{version}/{configuration}/",
+    "remote_path" : "./lwip/{module_name}/v{version}/{configuration}/",
     "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
-    "host"        : "https://lwip.s3-us-west-1.amazonaws.com"
+    "host"        : "https://mthost.org"
   },
   "scripts": {
     "install": "node-pre-gyp install --fallback-to-build",
@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/EyalAr/lwip.git"
+    "url": "https://github.com/willerce/lwip-decoder.git"
   },
   "keywords": [
     "image",
