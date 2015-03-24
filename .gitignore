@@ -2,5 +2,5 @@ build
 node_modules
 npm-debug.log
 tests/results
-lib
+/lib
 .idea
