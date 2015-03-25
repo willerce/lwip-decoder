@@ -1,18 +1,20 @@
 {
   "name": "lwip-decoder",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "dependencies": {
     "nan": "~1.4.1",
     "node-pre-gyp": "0.6.4"
   },
-  "bundledDependencies":["node-pre-gyp"],
+  "bundledDependencies":[
+    "node-pre-gyp"
+  ],
   "binary": {
     "module_name" : "lwip_decoder",
     "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
     "remote_path": "./{module_name}/v{version}/{configuration}/",
     "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
-    "host": "https://lwip.s3.amazonaws.com"
+    "host": "https://airdroid-support-lwip.s3.amazonaws.com"
   },
   "scripts": {
     "install": "node-pre-gyp install --fallback-to-build",

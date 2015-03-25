@@ -1,8 +1,8 @@
 environment:
   node_pre_gyp_accessKeyId:
-    secure: zjvjk+WdskG5bYwvg8Jr+Nq/eVdl4+TiMVy79rmkr10=
+    secure: EEwmu6iA6KXt17rBBSj03A8c/Z++UB5eMT07Iv1spoE=
   node_pre_gyp_secretAccessKey:
-    secure: qzwDoxlmWxN48tsnuqEE67obgZjnNbZFR1wLR4CWvOmqg+wFRZVTRPAx5qleQxcS
+    secure: Uj+8wxpv2uasrrWvTJ6N+O31iIZYdTov4zqI9neuyDUoCs4PzHX5QFKj1BMiqyNb
   matrix:
     - nodejs_version: 0.10.38
       platform: x86
