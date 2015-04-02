@@ -24,4 +24,5 @@ install:
 before_script:
 - export COMMIT_MESSAGE=$(git show -s --format=%B $TRAVIS_COMMIT | tr -d '\n')
 script:
+- chmod a+x ./scripts/build_against_node.sh
 - if [[ "${NODE_VERSION}" ]]; then ./scripts/build_against_node.sh; fi;
