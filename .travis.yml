@@ -19,6 +19,7 @@ before_install:
 - npm --version
 - npm update -g npm
 - npm --version
+- npm install
 install:
 - export PATH=./node_modules/.bin/:$PATH
 before_script:
