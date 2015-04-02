@@ -1,0 +1,31 @@
+language: cpp
+os:
+- osx
+branches:
+  except:
+  - /^v[0-9]/
+env:
+  matrix:
+  - NODE_VERSION="0.10.33"
+  - NODE_VERSION="0.11.16"
+  - NODE_VERSION="0.12.2"
+  global:
+  - secure: L3pLrJAqJteBAQ2rgQJtvXZVhr6pKWacW2hmG+xgpB5LZ+3JEdVd/r37T02eKURkc1GQFnEs8WslMLyWsJmYp2PPdhuPxg8UZXbEtx6q78LqCz9AxbYPmIwW8hmg3lPNB0uOM6iqEaY0A/0WoV/d+i2GlS64CYs30V7I7sw6TXM=
+  - secure: houQRbbjUdfP3ff443iAuiiR2R6G54YvPDZK8kIn/DQYI5+Yy4CVUnDSBqgu9i0Tp9qIN8bj3satzZYLy4HcUwFo23Y9cL5E2jY/SvS8TQHzBzlc+Dk0o2hJHk1VO/cg5MS8+n+V7jIKThp1AtqG2Bk8UXyOGgKWA7kXEJHNMdg=
+matrix:
+  exclude:
+  - env: NODE_WEBKIT="0.8.6" TARGET_ARCH="x64"
+    os: osx
+before_install:
+- echo $NODE_VERSION
+- node --version
+- npm --version
+- npm update -g npm
+- npm --version
+install:
+- export PATH=./node_modules/.bin/:$PATH
+before_script:
+- export COMMIT_MESSAGE=$(git show -s --format=%B $TRAVIS_COMMIT | tr -d '\n')
+script:
+- if [[ "${NODE_VERSION}" ]]; then ./scripts/build_against_node.sh; fi;
+- if [[ "${NODE_WEBKIT}" ]]; then ./scripts/build_against_node_webkit.sh; fi;
