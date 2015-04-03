@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "main": "index.js",
   "dependencies": {
-    "nan": "~1.7.9",
+    "nan": "~1.7.0",
     "node-pre-gyp": "~0.6.4"
   },
   "bundledDependencies": [
