@@ -4,7 +4,22 @@ environment:
   node_pre_gyp_SECRET_KEY:
     secure: D4+KDwcN6rMBK73B3WkcmKhlxwNlLcYvTkWFBbyPQAw9tKHh8r+xk+c4rYgdyLlH
   matrix:
-    - nodejs_version: 0.12.2
+    - nodejs_version: 0.10.38
+      platform: x86
+      msvs_toolset: 12
+    - nodejs_version: 0.10.38
+      platform: x64
+      msvs_toolset: 12
+    - nodejs_version: 0.11.16
+      platform: x86
+      msvs_toolset: 12
+    - nodejs_version: 0.11.16
+      platform: x64
+      msvs_toolset: 12
+    - nodejs_version: 0.12.1
+      platform: x86
+      msvs_toolset: 12
+    - nodejs_version: 0.12.1
       platform: x64
       msvs_toolset: 12
 

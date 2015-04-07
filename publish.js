@@ -17,7 +17,7 @@ function uploadFile(localFile, key, uptoken) {
     var extra = new qiniu.io.PutExtra();
     qiniu.io.putFile(uptoken, key, localFile, extra, function (err, ret) {
         if (!err) {
-            console.log(ret.key);
+            console.log('published to ', opt.hosted_tarball)
         } else {
             console.log(err);
         }
