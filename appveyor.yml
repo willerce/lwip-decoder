@@ -1,31 +1,10 @@
 environment:
-  node_pre_gyp_accessKeyId:
-    secure: EEwmu6iA6KXt17rBBSj03A8c/Z++UB5eMT07Iv1spoE=
-  node_pre_gyp_secretAccessKey:
-    secure: Uj+8wxpv2uasrrWvTJ6N+O31iIZYdTov4zqI9neuyDUoCs4PzHX5QFKj1BMiqyNb
+  node_pre_gyp_ACCESS_KEY:
+    secure: K5rv0JNbQDWF+bzv2g4X5cQpXVCNzEdIPwaXrpT8HgsZotBheiyW5RST+spoz3Iw
+  node_pre_gyp_SECRET_KEY:
+    secure: D4+KDwcN6rMBK73B3WkcmKhlxwNlLcYvTkWFBbyPQAw9tKHh8r+xk+c4rYgdyLlH
   matrix:
-    - nodejs_version: 0.10.38
-      platform: x86
-      msvs_toolset: 12
-    - nodejs_version: 0.10.38
-      platform: x64
-      msvs_toolset: 12
-    - nodejs_version: 0.11.16
-      platform: x86
-      msvs_toolset: 12
-    - nodejs_version: 0.11.16
-      platform: x64
-      msvs_toolset: 12
-    - nodejs_version: 0.12.1
-      platform: x86
-      msvs_toolset: 12
-    - nodejs_version: 0.12.1
-      platform: x64
-      msvs_toolset: 12
-    - nodejs_version: 1.6.0
-      platform: x86
-      msvs_toolset: 12
-    - nodejs_version: 1.6.0
+    - nodejs_version: 0.12.2
       platform: x64
       msvs_toolset: 12
 
@@ -71,7 +50,7 @@ install:
   - node-pre-gyp package %BUILD_ARGS%
   # make commit message env var shorter
   - SET CM=%APPVEYOR_REPO_COMMIT_MESSAGE%
-  - if not "%CM%" == "%CM:[publish binary]=%" node-pre-gyp --msvs_version=2013 publish %BUILD_ARGS%
+  - if not "%CM%" == "%CM:[publish binary]=%" node publish.js --msvs_version=2013 %BUILD_ARGS%
 
 build: OFF
 test: OFF
