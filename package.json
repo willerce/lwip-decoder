@@ -1,9 +1,9 @@
 {
   "name": "lwip-decoder",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "index.js",
   "dependencies": {
-    "nan": "~1.7.0",
+    "nan": "~1.8.4",
     "node-pre-gyp": "~0.6.4"
   },
   "bundledDependencies": [
