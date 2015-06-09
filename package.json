@@ -1,6 +1,6 @@
 {
   "name": "lwip-decoder",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "index.js",
   "dependencies": {
     "nan": "~1.8.4",
@@ -12,8 +12,8 @@
   "binary": {
     "module_name": "lwip_decoder",
     "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
-    "remote_path": "./",
-    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
+    "remote_path": "./{name}/v{version}/",
+    "package_name": "{node_abi}-{platform}-{arch}.tar.gz",
     "host": "https://dn-lwip.qbox.me"
   },
   "scripts": {
